@@ -7,7 +7,7 @@
 This repository contains the code and implementation details of the Group Project assignment for the CS6208 course. In this assignment, we propose a dual dynamic graph consistency framework, dubbed `Dual-DGC`, for robust point cloud classification under out-of-distribution corruption scenarios.
 
 <p align="center">
-  <img src="framework.png" align="center" width="60%">
+  <img src="framework.png" align="center" width="65%">
   <br>
   Fig. An overview of our dual dynamic graph consistency (Dual-DGC) framework. Two “views” are created as the input for branches $a$ and $b$, respectively, where branch $b$ is detached and updated via the EMA of branch $a$. A consistency loss $\mathcal{L}_c$ is calculated as the distance between two dynamic graph networks.
 </p>
