@@ -70,9 +70,9 @@ To evaluate `Dual-DGC` on ModelNet40, first set the folder path for the trained 
 CUDA_VISIBLE_DEVICES=0 python3 eval.py --eval --ckpt $OUTPUT_DIR/model.t7 --model dual_dgc --if_attn
 ```
 ### Robustness Test
-To evaluate `Dual-DGC` on all corruption sets in ModelNet-C, run the following command:
+To evaluate `Dual-DGC` on all corruption sets in ModelNet-C, first set the folder path for the trained model, as `$OUTPUT_DIR`, then run the following command:
 ```
-
+CUDA_VISIBLE_DEVICES=0 python3 eval.py --eval_corrupt --ckpt $OUTPUT_DIR/model.t7 --model dual_dgc --if_attn
 ```
 
 
