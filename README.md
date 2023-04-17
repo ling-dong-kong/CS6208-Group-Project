@@ -1,6 +1,6 @@
 # CS6208: Group Project
 > **Student:** Kong Lingdong (A0260240X)<br>
-> **Title:** "Robust Point Cloud Classification with Dual Dynamic Graph CNNs"<br>
+> **Title:** "Robust Point Cloud Classification with Dual Dynamic Graph Consistency"<br>
 > **Time:** AY 2022-2023, Semester II
 
 ## About
@@ -64,8 +64,14 @@ To prepare the `ModelNet-C` dataset, download the data from [[this](https://driv
 
 | Method | mCE | Scale | Jitter | Drop-G | Drop-L | Add-G | Add-L | Rotate | OA |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| DGCNN | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0.926 |
-
+| DGCNN        | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0.926 |
+| PointNet     | 1.422 | 1.266 | 0.642 | 0.500 | 1.072 | 2.980 | 1.593 | 1.902 | 0.907 |
+| PointNet++   | 1.072 | 0.872 | 1.177 | 0.641 | 1.802 | 0.614 | 0.993 | 1.405 | 0.930 |
+| RSCNN        | 
+| SimpleView   | 
+| PAConv       | 
+| PCT          | 
+| **Dual-DGC** |
 
 ## Reference
 
