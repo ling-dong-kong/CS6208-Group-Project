@@ -64,19 +64,21 @@ To train `Dual-DGC` on ModelNet40, run the following command:
 ```
 CUDA_VISIBLE_DEVICES=0 python3 train_dual_dgc.py --exp_name=$EXP_NAME --num_points=1024 --k=20 --model 'dual_dgc' --if_attn --batch_size 64 --test_batch_size 64 --workers 16 --epochs 350 --ratio $RATIO
 ```
-where `$EXP_NAME` is your folder path for logging and `$RATIO` is the dropping ratio in view generation.
+Note that `$EXP_NAME` is your folder path for logging and `$RATIO` is the dropping ratio in view generation, which need to be defined before running the command.
 
 ### Evaluation
 To evaluate `Dual-DGC` on ModelNet40, first set the folder path for the trained model, as `$OUTPUT_DIR`, then run the following command:
 ```
 CUDA_VISIBLE_DEVICES=0 python3 eval.py --eval --ckpt $OUTPUT_DIR/model.t7 --model dual_dgc --if_attn
 ```
+This will output the "clean" scores on the official ModelNet40 dataset.
 
 ### Robustness Test
 To evaluate `Dual-DGC` on all corruption sets in ModelNet-C, first set the folder path for the trained model, as `$OUTPUT_DIR`, then run the following command:
 ```
 CUDA_VISIBLE_DEVICES=0 python3 eval.py --eval_corrupt --ckpt $OUTPUT_DIR/model.t7 --model dual_dgc --if_attn
 ```
+This will output the accuracy scores as well as corruption errors for all corruption type in the ModelNet-C dataset.
 
 
 ## Main Result
