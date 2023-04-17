@@ -4,7 +4,7 @@
 > **Time:** AY 2022-2023, Semester II
 
 ## About
-This repository contains the code and implementation details of the Group Project assignment for the CS6208 course. In this assignment, we propose a dual dynamic graph CNNs, dubbed `Dual-DGC`, for robust point cloud classification under out-of-distribution corruption scenarios.
+This repository contains the code and implementation details of the Group Project assignment for the CS6208 course. In this assignment, we propose a dual dynamic graph consistency framework, dubbed `Dual-DGC`, for robust point cloud classification under out-of-distribution corruption scenarios.
 
 ## Installation
 This codebase is tested with `torch==1.10.0` with `CUDA 11.3`. In order to successfully reproduce the results reported, we recommend to follow the exact same configuation. However, similar versions that came out lately should be good as well.
@@ -61,6 +61,10 @@ To prepare the `ModelNet-C` dataset, download the data from [[this](https://driv
 
 
 ## Main Result
+
+| Method | mCE | Scale | Jitter | Drop-G | Drop-L | Add-G | Add-L | Rotate | OA |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| DGCNN | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0.926 |
 
 
 ## Reference
