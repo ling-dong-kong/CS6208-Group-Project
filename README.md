@@ -28,6 +28,34 @@ pip install numpy sklearn glob h5py plyfile torch_scatter
 
 ## Data Preparation
 
+### ModelNet40
+To prepare the `ModelNet40` dataset, download the data from [[this](https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip)] official webpage and put the folder into `./data/`.
+```
+└── data 
+      └── modelnet40_ply_hdf5_2048
+          |── ply_data_train*.h5 (#5)
+          |── ply_data_test*.h5 (#2)
+          |── shape_names.txt
+          |── train_files.txt
+          |── test_files.txt
+          |── ply_data_train*.json (#5)
+          └── ply_data_test*.json (#2)
+```
+
+### ModelNet-C
+To prepare the `ModelNet-C` dataset, download the data from [[this](https://drive.google.com/file/d/1KE6MmXMtfu_mgxg4qLPdEwVD5As8B0rm/view?usp=sharing)] Google Drive link and put the folder into `./data/`.
+```
+└── data 
+      └── modelnet_c
+          |── clean.h5
+          |── add_global*.h5 (#5)
+          |── add_local*.h5 (#5)
+          |── dropout_global*.h5 (#5)
+          |── dropout_local*.h5 (#5)
+          |── jitter*.h5 (#5)
+          |── rotate*.h5 (#5)
+          └── scale*.h5 (#5)
+  ```
 
 ## Getting Started
 
