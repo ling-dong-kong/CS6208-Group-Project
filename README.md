@@ -59,6 +59,24 @@ To prepare the `ModelNet-C` dataset, download the data from [[this](https://driv
 
 ## Getting Started
 
+### Training
+To train `Dual-DGC` on ModelNet40, run the following command:
+```
+
+```
+
+### Evaluation
+To evaluate `Dual-DGC` on ModelNet40, run the following command:
+```
+
+```
+
+### Robustness Test
+To evaluate `Dual-DGC` on all corruption sets in ModelNet-C, run the following command:
+```
+
+```
+
 
 ## Main Result
 
