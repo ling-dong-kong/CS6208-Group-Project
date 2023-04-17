@@ -62,13 +62,16 @@ To prepare the `ModelNet-C` dataset, download the data from [[this](https://driv
 ### Training
 To train `Dual-DGC` on ModelNet40, run the following command:
 ```
-
+CUDA_VISIBLE_DEVICES=0 python3 train_dual_dgc.py --exp_name=$EXP_NAME --num_points=1024 --k=20 --model 'dual_dgc' --if_attn --batch_size 64 --test_batch_size 64 --workers 16 --epochs 350 --ratio $RATIO
 ```
+where `$EXP_NAME` is your folder path for logging and `$RATIO` is the dropping ratio in view generation.
+
 ### Evaluation
 To evaluate `Dual-DGC` on ModelNet40, first set the folder path for the trained model, as `$OUTPUT_DIR`, then run the following command:
 ```
 CUDA_VISIBLE_DEVICES=0 python3 eval.py --eval --ckpt $OUTPUT_DIR/model.t7 --model dual_dgc --if_attn
 ```
+
 ### Robustness Test
 To evaluate `Dual-DGC` on all corruption sets in ModelNet-C, first set the folder path for the trained model, as `$OUTPUT_DIR`, then run the following command:
 ```
@@ -91,7 +94,8 @@ CUDA_VISIBLE_DEVICES=0 python3 eval.py --eval_corrupt --ckpt $OUTPUT_DIR/model.t
 
 ## Reference
 
+- [(Wu, et al., 2015)](https://arxiv.org/abs/1406.5670) Wu, Z., Song, S., Khosla, A., Yu, F., Zhang, L., Tang, X., and Xiao, J. "3d shapenets: A deep representation for volumetric shapes." In *IEEE/CVF Conference on Computer Vision and Pattern Recognition*, pp. 1912–1920, 2015.
 - [(Wang, et al., 2019)](https://arxiv.org/abs/1801.07829) Wang, Y., Sun, Y., Liu, Z., Sarma, S. E., Bronstein, M. M., and Solomon, J. M. "Dynamic graph cnn for learning on point clouds." *ACM Transactions On Graphics*, 38(5): 1–12, 2019.
-- [(We, et al., 2015)](https://arxiv.org/abs/1406.5670) Wu, Z., Song, S., Khosla, A., Yu, F., Zhang, L., Tang, X., and Xiao, J. "3d shapenets: A deep representation for volumetric shapes." In *IEEE/CVF Conference on Computer Vision and Pattern Recognition*, pp. 1912–1920, 2015.
-
+- [(Goyal, et al., 2021)](https://arxiv.org/abs/2106.05304) Goyal, A., Law, H., Liu, B., Newell, A., and Deng, J. "Revisiting point cloud shape classification with a simple and effective baseline." In *International Conference on Machine Learning,* pp. 3809–3820, 2021.
+- [(Ren, et al., 2022)](https://arxiv.org/abs/2202.03377) Ren, J., Pan, L., and Liu, Z. "Benchmarking and analyzing point cloud classification under corruptions." In *International Conference on Machine Learning*, pp. 18559–18575, 2022.
 
