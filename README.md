@@ -62,7 +62,7 @@ To prepare the `ModelNet-C` dataset, download the data from [[this](https://driv
 ### Training
 To train `Dual-DGC` on ModelNet40, run the following command:
 ```
-CUDA_VISIBLE_DEVICES=0 python3 train_dual_dgc.py --exp_name=$EXP_NAME --num_points=1024 --k=20 --model 'dual_dgc' --if_attn --batch_size 64 --test_batch_size 64 --workers 16 --epochs 350 --ratio $RATIO
+CUDA_VISIBLE_DEVICES=0 python3 train.py --exp_name=$EXP_NAME --num_points=1024 --k=20 --model 'dual_dgc' --if_attn --batch_size 64 --test_batch_size 64 --workers 16 --epochs 350 --ratio $RATIO
 ```
 Note that `$EXP_NAME` is your folder path for logging and `$RATIO` is the dropping ratio in view generation, which need to be defined before running the command.
 
